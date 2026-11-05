@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-100 text-cocoa-800 font-sans leading-relaxed antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif leading-tight text-cocoa-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-terracotta-500 ring-offset-2 ring-offset-cream-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-cocoa-800 px-6 py-3 text-sm font-semibold text-cream-50 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-cocoa-700 hover:shadow-lift active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cocoa-300 bg-white/70 px-6 py-3 text-sm font-semibold text-cocoa-800 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-cocoa-500 hover:bg-white active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-whatsapp-600 hover:shadow-lift active:translate-y-0;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-cocoa-200 bg-white px-4 py-3 text-sm text-cocoa-900 placeholder:text-cocoa-400 transition-colors duration-200 focus:border-terracotta-500 focus:outline-none focus:ring-2 focus:ring-terracotta-100;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-terracotta-600;
+  }
+}
